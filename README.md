@@ -1,1 +1,1 @@
-# gw2-home-instance
+# gw2-amalgamated-gemstone
