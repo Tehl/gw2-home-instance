@@ -76,12 +76,23 @@ function expandNode(itemDb, node) {
     avgSell += node.avgSell;
   });
 
-  result.minBuy = minBuy * node.swings;
-  result.maxBuy = maxBuy * node.swings;
-  result.avgBuy = avgBuy * node.swings;
-  result.minSell = minSell * node.swings;
-  result.maxSell = maxSell * node.swings;
-  result.avgSell = avgSell * node.swings;
+  result.swingValue = {
+    minBuy,
+    maxBuy,
+    avgBuy,
+    minSell,
+    maxSell,
+    avgSell
+  };
+
+  result.nodeValue = {
+    minBuy: minBuy * node.swings,
+    maxBuy: maxBuy * node.swings,
+    avgBuy: avgBuy * node.swings,
+    minSell: minSell * node.swings,
+    maxSell: maxSell * node.swings,
+    avgSell: avgSell * node.swings
+  };
 
   return result;
 }
