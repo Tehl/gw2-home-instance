@@ -3,10 +3,6 @@ import Aux from "react-aux";
 import ItemRow from "./ItemRow";
 import RowPrice from "../Generic/RowPrice";
 
-function sumPrice(drops, field) {
-  return drops.reduce((sum, o) => sum + o[field], 0);
-}
-
 const SwingValueNodeRow = ({ node }) =>
   <Aux>
     <tr className="node">

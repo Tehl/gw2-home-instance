@@ -3,13 +3,13 @@ import NodeRow from "./NodeRow";
 
 import "./Grid.less";
 
-const SwingValueGrid = ({ nodes }) =>
-  <table className="striped swing-value-grid">
+const NodeValueGrid = ({ nodes }) =>
+  <table className="striped node-value-grid">
     <thead>
       <tr>
         <th>Node</th>
-        <th colSpan="2">Item</th>
         <th>Per Swing</th>
+        <th>Swings</th>
         <th>Buy (min)</th>
         <th>Buy (max)</th>
         <th>Buy (avg)</th>
@@ -23,4 +23,4 @@ const SwingValueGrid = ({ nodes }) =>
     </tbody>
   </table>;
 
-export default SwingValueGrid;
+export default NodeValueGrid;
