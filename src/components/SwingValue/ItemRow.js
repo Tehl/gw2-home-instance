@@ -26,7 +26,7 @@ const SwingValueItemRow = ({ item, isPotentialDrop }) => {
 
   let className = isPotentialDrop ? "item item-potential" : "item";
   let rows = [
-    <tr className={className}>
+    <tr key={0} className={className}>
       <td />
       {name}
       <td>
@@ -38,8 +38,8 @@ const SwingValueItemRow = ({ item, isPotentialDrop }) => {
 
   if (item.dropTable) {
     rows = rows.concat(
-      item.dropTable.map(drop =>
-        <SwingValueItemRow item={drop} isPotentialDrop={true} />
+      item.dropTable.map((drop, idx) =>
+        <SwingValueItemRow key={idx + 1} item={drop} isPotentialDrop={true} />
       )
     );
   }

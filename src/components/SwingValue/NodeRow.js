@@ -5,7 +5,7 @@ import RowPrice from "../Generic/RowPrice";
 
 const SwingValueNodeRow = ({ node }) =>
   <Aux>
-    <tr className="node">
+    <tr key={0} className="node">
       <td>
         {node.name}
       </td>
@@ -13,7 +13,7 @@ const SwingValueNodeRow = ({ node }) =>
       <td />
       <RowPrice item={node.swingValue} />
     </tr>
-    {node.drops.map((item, i) => <ItemRow key={i} item={item} />)}
+    {node.drops.map((item, idx) => <ItemRow key={idx + 1} item={item} />)}
   </Aux>;
 
 export default SwingValueNodeRow;
