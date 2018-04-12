@@ -34,6 +34,12 @@ module.exports = {
     filename: chunkName + ".js",
     path: path.resolve(__dirname, "dist")
   },
+  resolve: {
+    alias: {
+      src: path.resolve("./src"),
+      data: path.resolve("./data")
+    }
+  },
   devServer: {
     contentBase: "./src/"
   },

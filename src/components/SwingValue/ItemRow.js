@@ -12,7 +12,7 @@ const SwingValueItemRow = ({ item, isPotentialDrop }) => {
       </React.Fragment>
     );
   } else if (item.dropTable) {
-    name = <td colSpan="2">Additional drops:</td>;
+    name = <td colSpan="2">Random drop:</td>;
   } else {
     name = <td colSpan="2">{item.name}</td>;
   }

@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import configureStore from "./configureStore";
 import App from "./components/App";
 import gw2Api from "./services/gw2Api";
-import nodes from "./data/nodes";
+import nodes from "../data/nodes";
 import initialize from "./logic/initialize";
 
 const store = configureStore();
