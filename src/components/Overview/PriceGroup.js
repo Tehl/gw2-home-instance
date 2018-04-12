@@ -3,7 +3,7 @@ import { formatPrice } from "../../utility/display";
 
 import "./PriceGroup.less";
 
-const PriceGroup = ({ label, minValue, maxValue, avgValue }) =>
+const PriceGroup = ({ label, minValue, maxValue, avgValue }) => (
   <table className="bordered price-group">
     <thead>
       <tr>
@@ -28,14 +28,11 @@ const PriceGroup = ({ label, minValue, maxValue, avgValue }) =>
         <th className="value-label">Max</th>
       </tr>
       <tr>
-        <td className="value">
-          {formatPrice(minValue)}
-        </td>
-        <td className="value">
-          {formatPrice(maxValue)}
-        </td>
+        <td className="value">{formatPrice(minValue)}</td>
+        <td className="value">{formatPrice(maxValue)}</td>
       </tr>
     </tbody>
-  </table>;
+  </table>
+);
 
 export default PriceGroup;

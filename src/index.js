@@ -7,8 +7,6 @@ import gw2Api from "./services/gw2Api";
 import nodes from "./data/nodes";
 import initialize from "./logic/initialize";
 
-import "./style.less";
-
 const store = configureStore();
 
 ReactDOM.render(

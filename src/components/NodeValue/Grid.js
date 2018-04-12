@@ -3,7 +3,7 @@ import NodeRow from "./NodeRow";
 
 import "./Grid.less";
 
-const NodeValueGrid = ({ nodes }) =>
+const NodeValueGrid = ({ nodes }) => (
   <table className="striped node-value-grid">
     <thead>
       <tr>
@@ -18,9 +18,8 @@ const NodeValueGrid = ({ nodes }) =>
         <th>Sell (avg)</th>
       </tr>
     </thead>
-    <tbody>
-      {nodes.map((node, i) => <NodeRow key={i} node={node} />)}
-    </tbody>
-  </table>;
+    <tbody>{nodes.map((node, i) => <NodeRow key={i} node={node} />)}</tbody>
+  </table>
+);
 
 export default NodeValueGrid;
